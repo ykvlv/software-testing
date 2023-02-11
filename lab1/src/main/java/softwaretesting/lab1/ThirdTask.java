@@ -2,25 +2,33 @@ package softwaretesting.lab1;
 
 import softwaretesting.lab1.model.*;
 
+import java.util.Collections;
+import java.util.HashSet;
+
 public class ThirdTask {
     private ThirdTask() {}
 
     public static void run() {
-        Arthur arthur = new Arthur();
-        Bulldozer bulldozer = new Bulldozer();
-        ArthurHouse arthurHouse = new ArthurHouse();
+        Location arthurHouseLocation = new Location("улица Пушкина дом Артура");
+        Location pushkinStreetLocation = new Location("улица Пушкина");
+
+        Human arthur = new Human("Артур", pushkinStreetLocation);
+        Bulldozer bulldozer = new Bulldozer("Caterpillar D6R2", pushkinStreetLocation, 8, 15);
+        House arthurHouse = new House("дом Артура", arthurHouseLocation, 100, arthur);
+
         Environment environment = new Environment(
-                new Temperature(),
-                new Weather(),
+                25,
+                new HashSet<>(Collections.singleton(WeatherPhenomenon.CLOUDY)),
                 arthur, arthurHouse, bulldozer
         );
 
+        bulldozer.goTo(arthurHouse);                                // бульдозер едет к дому артура
+        arthur.goTo(arthurHouse);                                   // артур бежит к дому
+        environment.changeTemperatureBy(-5);                // становится холодно
+        environment.addWeatherPhenomenon(WeatherPhenomenon.WINDY);  // подул ветер
+        environment.addWeatherPhenomenon(WeatherPhenomenon.RAINY);  // пошел дождь
         bulldozer.demolish(arthurHouse);                            // бульдозер сносит дом артура
-        arthur.runTo(arthurHouse);                                  // артур бежит к дому
-        environment.addTemperature(-5);                             // становится холодно
-        environment.addWeatherPhenomena(WeatherPhenomena.WINDY);    // подул ветер
-        environment.addWeatherPhenomena(WeatherPhenomena.RAINY);    // пошел дождь
         bulldozer.compact(arthurHouse);                             // бульдозер УпЛоТнЯеТ дом артура
-        arthur.printScope();                                        // что видит артур?
+        environment.printScopeOf(arthur);                           // что видит артур?
     }
 }
