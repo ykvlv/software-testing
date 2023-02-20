@@ -36,7 +36,7 @@ public abstract class Building extends Entity {
     }
 
     public boolean isDestroyed() {
-        return hp > 0;
+        return hp <= 0;
     }
 
     public int getHp() {
