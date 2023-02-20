@@ -1,6 +1,6 @@
-package softwaretesting.lab1.model;
+package softwaretesting.lab1.task3.model;
 
-import softwaretesting.lab1.model.exception.EntityNotInEnvironmentException;
+import softwaretesting.lab1.task3.model.exception.EntityNotInEnvironmentException;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -19,6 +19,10 @@ public class Environment {
     public void changeTemperatureBy(int number) {
         System.out.printf("~ Температура изменилась %s -> %s ~\n", temperature, temperature + number);
         temperature += number;
+    }
+
+    public int getTemperature(){
+        return temperature;
     }
 
     public void addWeatherPhenomenon(WeatherPhenomenon weatherPhenomenon) {

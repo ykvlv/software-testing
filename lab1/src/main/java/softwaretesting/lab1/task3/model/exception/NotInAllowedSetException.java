@@ -1,4 +1,4 @@
-package softwaretesting.lab1.model.exception;
+package softwaretesting.lab1.task3.model.exception;
 
 public class NotInAllowedSetException extends RuntimeException{
     public NotInAllowedSetException(String message) {

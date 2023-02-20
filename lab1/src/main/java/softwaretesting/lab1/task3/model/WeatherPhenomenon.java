@@ -1,4 +1,4 @@
-package softwaretesting.lab1.model;
+package softwaretesting.lab1.task3.model;
 
 public enum WeatherPhenomenon {
     WINDY("ветренно"), RAINY("дождливо"), CLOUDY("облачно"), SUNNY("солнечно");

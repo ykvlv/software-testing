@@ -1,10 +1,9 @@
-package softwaretesting.lab1;
+package softwaretesting.lab1.task3;
 
-import softwaretesting.lab1.model.*;
+import softwaretesting.lab1.task3.model.*;
 
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.stream.Collectors;
 
 public class ThirdTask {
     private ThirdTask() {}
