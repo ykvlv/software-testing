@@ -12,7 +12,7 @@ public class TestTgFunc {
 
     @ParameterizedTest
     @ValueSource(doubles = { Math.PI/6, Math.PI/4, Math.PI/3, 0, Math.PI/6, Math.PI/4, Math.PI/3 })
-    public void baseLogin(double value) {
+    public void baseLogic(double value) {
         assertEquals(Math.tan(value), TgFunc.tg(value), eps);
     }
 
