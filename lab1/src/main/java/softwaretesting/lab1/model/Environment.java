@@ -1,17 +1,63 @@
 package softwaretesting.lab1.model;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import softwaretesting.lab1.model.exception.EntityNotInEnvironmentException;
+
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Environment {
-    private final Temperature temperature;
-    private final Weather weather;
-    private final List<Entity> entities;
+    private int temperature;
+    private final Set<WeatherPhenomenon> weatherPhenomena;
+    private final Set<Entity> entities;
 
-    public Environment(Temperature temperature, Weather weather, Entity... entities) {
+    public Environment(int temperature, Set<WeatherPhenomenon> weatherPhenomena, Entity... entities) {
         this.temperature = temperature;
-        this.weather = weather;
-        this.entities = new ArrayList<>(Arrays.asList(entities));
+        this.weatherPhenomena = weatherPhenomena;
+        this.entities = new HashSet<Entity>(Arrays.asList(entities));
+    }
+
+    public void changeTemperatureBy(int number) {
+        System.out.printf("~ Температура изменилась %s -> %s ~\n", temperature, temperature + number);
+        temperature += number;
+    }
+
+    public void addWeatherPhenomenon(WeatherPhenomenon weatherPhenomenon) {
+        if (weatherPhenomena.contains(weatherPhenomenon)) {
+            System.out.printf("~ По прежнему %s ~\n", weatherPhenomenon.getName());
+        } else {
+            System.out.printf("~ Становится %s ~\n", weatherPhenomenon.getName());
+            weatherPhenomena.add(weatherPhenomenon);
+        }
+    }
+
+    public void removeWeatherPhenomenon(WeatherPhenomenon weatherPhenomenon) {
+        if (weatherPhenomena.contains(weatherPhenomenon)) {
+            System.out.printf("~ Уже не так %s ~\n", weatherPhenomenon.getName());
+            weatherPhenomena.remove(weatherPhenomenon);
+        } else {
+            System.out.printf("~ По прежнему не %s ~\n", weatherPhenomenon.getName());
+        }
+    }
+
+    public Set<Entity> getScopeOf(Entity entity) {
+        if (!entities.contains(entity)) throw new EntityNotInEnvironmentException("Сущность не находится в окружении");
+        return entities.stream()
+                .filter(e -> entity.getLocation().equals(e.getLocation()))
+                .filter(e -> !entity.equals(e))
+                .collect(Collectors.toSet());
+    }
+
+    public void printScopeOf(Entity entity) {
+        System.out.printf(
+                "В зоне видимости %s находится: %s\n",
+                entity,
+                getScopeOf(entity).stream()
+                        .map(Entity::toString)
+                        .collect(Collectors.joining(", "))
+        );
+    }
+
+    public Set<WeatherPhenomenon> getWeatherPhenomena() {
+        return weatherPhenomena;
     }
 }
