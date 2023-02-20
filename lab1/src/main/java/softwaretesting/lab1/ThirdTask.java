@@ -4,6 +4,7 @@ import softwaretesting.lab1.model.*;
 
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.stream.Collectors;
 
 public class ThirdTask {
     private ThirdTask() {}

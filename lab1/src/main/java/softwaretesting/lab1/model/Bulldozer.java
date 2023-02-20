@@ -11,21 +11,18 @@ public class Bulldozer extends Movable {
     }
 
     public void demolish(Building building) {
-        System.out.printf("%s разрушает %s\n", this.getName(), building.getName());
-        int prevHp = building.getHp();
-        building.changeHpBy(-tons * speed);
+        int damage = tons * speed;
         System.out.printf(
-                "%s наностит %s урона. Здоровье %s: %s -> %s\n",
+                "%s наносит %s урона %s\n",
                 this.getName(),
-                tons * speed,
-                building.getName(),
-                prevHp,
-                building.getHp()
+                damage,
+                building.getName()
         );
+        building.damage(damage);
     }
 
     public void compact(Building building) {
-        if (building.getHp() > 0) {
+        if (building.isDestroyed()) {
             System.out.printf("%s не может ползать по %s. Здание не разрушено до конца\n", this.getName(), building.getName());
         } else {
             System.out.printf("%s ползает по %s\n", this.getName(), building.getName());
