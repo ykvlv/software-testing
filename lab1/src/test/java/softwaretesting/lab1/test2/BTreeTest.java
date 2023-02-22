@@ -2,6 +2,7 @@ package softwaretesting.lab1.test2;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -15,7 +16,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class TestBTree {
+public class BTreeTest {
     BTree tree;
 
     @BeforeEach
@@ -64,5 +65,10 @@ public class TestBTree {
         assertFalse(tree.contains(val));
         tree.insert(val);
         assertTrue(tree.contains(val));
+    }
+
+    @Test
+    public void print() {
+        tree.print();
     }
 }

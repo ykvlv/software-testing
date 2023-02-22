@@ -22,9 +22,9 @@ public class ThirdTask {
                 arthur, arthurHouse, bulldozer
         );
 
-        bulldozer.goTo(arthurHouse);                                // бульдозер едет к дому артура
-        arthur.goTo(arthurHouse);                                   // артур бежит к дому
-        environment.changeTemperatureBy(-5);                // становится холодно
+        environment.movableGoTo(bulldozer, arthurHouse);            // бульдозер едет к дому артура
+        environment.movableGoTo(arthur, arthurHouse);               // артур бежит к дому
+        environment.changeTemperatureBy(-5);                        // становится холодно
         environment.addWeatherPhenomenon(WeatherPhenomenon.WINDY);  // подул ветер
         environment.addWeatherPhenomenon(WeatherPhenomenon.RAINY);  // пошел дождь
         bulldozer.demolish(arthurHouse);                            // бульдозер сносит дом артура

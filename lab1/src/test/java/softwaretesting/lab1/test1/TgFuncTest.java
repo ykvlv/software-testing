@@ -7,7 +7,7 @@ import softwaretesting.lab1.task1.TgFunc;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class TestTgFunc {
+public class TgFuncTest {
     double eps = 0.5;
 
     @ParameterizedTest

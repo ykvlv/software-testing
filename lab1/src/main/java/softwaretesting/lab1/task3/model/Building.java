@@ -39,7 +39,4 @@ public abstract class Building extends Entity {
         return hp <= 0;
     }
 
-    public int getHp() {
-        return hp;
-    }
 }
