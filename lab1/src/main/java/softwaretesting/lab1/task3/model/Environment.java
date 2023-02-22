@@ -1,6 +1,6 @@
-package softwaretesting.lab1.model;
+package softwaretesting.lab1.task3.model;
 
-import softwaretesting.lab1.model.exception.EntityNotInEnvironmentException;
+import softwaretesting.lab1.task3.model.exception.EntityNotInEnvironmentException;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -13,12 +13,16 @@ public class Environment {
     public Environment(int temperature, Set<WeatherPhenomenon> weatherPhenomena, Entity... entities) {
         this.temperature = temperature;
         this.weatherPhenomena = weatherPhenomena;
-        this.entities = new HashSet<Entity>(Arrays.asList(entities));
+        this.entities = new HashSet<>(Arrays.asList(entities));
     }
 
     public void changeTemperatureBy(int number) {
         System.out.printf("~ Температура изменилась %s -> %s ~\n", temperature, temperature + number);
         temperature += number;
+    }
+
+    public int getTemperature(){
+        return temperature;
     }
 
     public void addWeatherPhenomenon(WeatherPhenomenon weatherPhenomenon) {
@@ -45,6 +49,13 @@ public class Environment {
                 .filter(e -> entity.getLocation().equals(e.getLocation()))
                 .filter(e -> !entity.equals(e))
                 .collect(Collectors.toSet());
+    }
+
+    public void movableGoTo(Movable who, Entity to) {
+        if (!entities.contains(who) || !entities.contains(to))
+            throw new EntityNotInEnvironmentException("Сущность не находится в окружении");
+        System.out.printf("%s направляется к %s\n", who.getName(), to.getName());
+        who.setLocation(to.getLocation());
     }
 
     public void printScopeOf(Entity entity) {

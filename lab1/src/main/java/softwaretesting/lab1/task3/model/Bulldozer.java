@@ -1,4 +1,6 @@
-package softwaretesting.lab1.model;
+package softwaretesting.lab1.task3.model;
+
+import softwaretesting.lab1.task3.model.exception.CantCompactBuildingException;
 
 public class Bulldozer extends Movable {
     private final int tons;
@@ -22,10 +24,14 @@ public class Bulldozer extends Movable {
     }
 
     public void compact(Building building) {
-        if (building.isDestroyed()) {
-            System.out.printf("%s не может ползать по %s. Здание не разрушено до конца\n", this.getName(), building.getName());
-        } else {
-            System.out.printf("%s ползает по %s\n", this.getName(), building.getName());
-        }
+        if (!building.isDestroyed())
+            throw new CantCompactBuildingException(
+                    String.format(
+                            "%s не может ползать по %s. Здание не разрушено до конца\n",
+                            this.getName(),
+                            building.getName()
+                    )
+            );
+        System.out.printf("%s ползает по %s\n", this.getName(), building.getName());
     }
 }

@@ -1,6 +1,6 @@
-package softwaretesting.lab1.model;
+package softwaretesting.lab1.task3.model;
 
-import softwaretesting.lab1.model.exception.NotInAllowedSetException;
+import softwaretesting.lab1.task3.model.exception.NotInAllowedSetException;
 
 public abstract class Building extends Entity {
     private int hp;
@@ -39,7 +39,4 @@ public abstract class Building extends Entity {
         return hp <= 0;
     }
 
-    public int getHp() {
-        return hp;
-    }
 }
