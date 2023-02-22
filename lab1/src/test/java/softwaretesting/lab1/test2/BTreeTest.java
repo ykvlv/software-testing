@@ -23,8 +23,8 @@ public class BTreeTest {
     public void fixture() {
         tree = new BTree();
         tree.insert(3);
-        tree.insert(-1);
-        tree.insert(-4);
+        tree.insert(1);
+        tree.insert(4);
         tree.insert(999);
     }
 
@@ -33,9 +33,9 @@ public class BTreeTest {
         public Stream<? extends Arguments> provideArguments(ExtensionContext context) {
             return Stream.of(
                     Arguments.of(0, false),
-                    Arguments.of(-3, false),
+                    Arguments.of(6543, false),
                     Arguments.of(999, true),
-                    Arguments.of(-1, true)
+                    Arguments.of(1, true)
             );
         }
     }
@@ -47,7 +47,7 @@ public class BTreeTest {
     }
 
     @ParameterizedTest
-    @ValueSource(ints = { 999, -21, -4, -999 })
+    @ValueSource(ints = { 999, 21, 4, 99999 })
     public void removing(int val) {
         if (tree.contains(val)){
             assertTrue(tree.delete(val));
@@ -60,7 +60,7 @@ public class BTreeTest {
     }
 
     @ParameterizedTest
-    @ValueSource(ints = { -2, -21, -999 })
+    @ValueSource(ints = { 2, 21, 7999 })
     public void inserting(int val) {
         assertFalse(tree.contains(val));
         tree.insert(val);

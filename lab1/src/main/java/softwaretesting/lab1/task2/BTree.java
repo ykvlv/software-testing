@@ -33,15 +33,6 @@ public class BTree {
         }
     }
 
-    /**
-     * The Insert in none full node Method:
-     * This method insert a key k into a node that is already full.
-     * The insert method takes two arguments: Node x, and integer k as a value
-     * The run time of the Insert in None Full Node algorithm is: O(t log n).
-     *
-     * @param node that the value will be inserted in.
-     * @param value the value to be inserted
-     */
     private void insertNonFull(Node node, int value) {
         // Allocate the node
         int i = node.numberOfNodes;

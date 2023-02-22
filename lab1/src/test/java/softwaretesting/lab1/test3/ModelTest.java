@@ -76,9 +76,7 @@ public class ModelTest {
 
         Human notInEnvironment = new Human("Ноунейм", new Location("Улица ноунеймов"));
 
-        assertThrows(EntityNotInEnvironmentException.class, () -> {
-            environment.movableGoTo(notInEnvironment, arthur);
-        });
+        assertThrows(EntityNotInEnvironmentException.class, () -> environment.movableGoTo(notInEnvironment, arthur));
     }
 
     @Test
@@ -86,15 +84,11 @@ public class ModelTest {
         bulldozer.demolish(arthurHouse);
         assertTrue(arthurHouse.isDestroyed());
 
-        assertThrows(NotInAllowedSetException.class, () -> {
-            arthurHouse.repair(-100);
-        });
+        assertThrows(NotInAllowedSetException.class, () -> arthurHouse.repair(-100));
 
         arthurHouse.repair(100);
 
         assertFalse(arthurHouse.isDestroyed());
-        assertThrows(CantCompactBuildingException.class, () -> {
-            bulldozer.compact(arthurHouse);
-        });
+        assertThrows(CantCompactBuildingException.class, () -> bulldozer.compact(arthurHouse));
     }
 }
