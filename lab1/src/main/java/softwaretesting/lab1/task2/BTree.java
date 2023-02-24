@@ -175,8 +175,7 @@ public class BTree {
                 if (!node.isLeaf) {
                     printBtree(node.children[i], indent + "\t");
                 }
-                if(node.key[i] > 0)
-                    System.out.println(indent + node.key[i]);
+                System.out.println(indent + node.key[i]);
             }
             if (!node.isLeaf) {
                 printBtree(node.children[node.numberOfNodes], indent + "\t");
