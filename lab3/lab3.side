@@ -1,0 +1,652 @@
+{
+  "id": "5c6534c9-cb1b-47ec-b347-e3a69d4af684",
+  "version": "3.0",
+  "name": "lab3",
+  "url": "http://www.tumblr.com",
+  "urls": [
+    "http://www.google.com"
+  ],
+  "plugins": [],
+  "suites": [
+    {
+      "id": "75768f06-4dd6-430e-8f6a-5181acb70de6",
+      "name": "Main Suite",
+      "parallel": false,
+      "persistSession": false,
+      "tests": [
+        "b4a77e13-987f-47a0-9570-f0614a2425d6",
+        "85089067-5f86-4726-ab70-81add7525618",
+        "18a33d59-7c72-4cc8-bfd3-d57944c46399",
+        "ae793521-ba35-4376-9d43-ce5c5206be82",
+        "9d40efb9-761f-4b1a-9447-7b6480394af7",
+        "4d053eab-8a1e-4c17-83ae-5c4c557edb9a",
+        "dd0e114b-8894-4b9a-89b8-c10e93d6b6bd",
+        "cfd2aa10-73a6-4fa6-b204-0bd21f1ceaef",
+        "98887102-a895-42ed-acca-71f27c345459",
+        "80643584-1e10-4a46-8427-ef30120e3dde",
+        "e21ffe2d-1938-4d15-9922-21810c93caae",
+        "0b97e344-f679-4cf5-973d-ce135809c2f0",
+        "a818c64c-f52b-40df-bc59-3a280070433b",
+        "4789db27-7834-4c3c-997a-40b3805b3bc5",
+        "65085a4b-5393-4a63-86ef-3e71e281692f",
+        "2915bfbe-d407-45bc-9081-de8cfc0a3ebe",
+        "b82ea20f-afab-41d8-8aaa-36cbfd9b6945"
+      ],
+      "timeout": 30000
+    }
+  ],
+  "tests": [
+    {
+      "id": "b82ea20f-afab-41d8-8aaa-36cbfd9b6945",
+      "name": "logout",
+      "commands": [
+        {
+          "id": "0eb40997-36c9-4c3a-8e95-4cfaf811003b",
+          "command": "open",
+          "target": "/",
+          "value": ""
+        },
+        {
+          "command": "setWindowSize",
+          "target": "1024x768",
+          "value": "",
+          "id": "e8f9fec7-80a4-4d1e-ab8d-938ecc1f4d21"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[1]/header/div[2]/div[8]/span/span/button",
+          "value": "",
+          "id": "e9c68171-9c7b-4a50-93d3-5ad91f9b0431"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[1]/header/div[2]/div[8]/span/div/div/div/div[1]/button",
+          "value": "",
+          "id": "73fe53bb-2dd1-4c40-90ed-194fabe0dc05"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"glass-container\"]/div/div[2]/div/div[2]/button[2]",
+          "value": "",
+          "id": "92b37b81-7673-4049-8093-53539a94e970"
+        }
+      ]
+    },
+    {
+      "id": "b4a77e13-987f-47a0-9570-f0614a2425d6",
+      "name": "login",
+      "commands": [
+        {
+          "id": "3dbbce2e-1eba-4934-9b9d-89c0c700a8a9",
+          "command": "open",
+          "target": "/",
+          "value": ""
+        },
+        {
+          "command": "setWindowSize",
+          "target": "1024x768",
+          "value": "",
+          "id": "56b51d26-3ca9-4607-b7e1-4a9cb7b36170"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[1]/header/div[2]/a[1]",
+          "value": "",
+          "id": "25306d69-7008-469f-8ff3-398348f665b7"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"glass-container\"]/div/div/div/div/div[2]/div/form/div[1]/div/button",
+          "value": "",
+          "id": "c1aee9e8-8623-4294-b766-476014b815cd"
+        },
+        {
+          "command": "type",
+          "target": "//*[@id=\"glass-container\"]/div/div/div/div/div[2]/div/form/div[1]/input",
+          "value": "fable.meetups0@icloud.com",
+          "id": "4af44aa1-cf4c-40c7-aa9c-297dba78a258"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"glass-container\"]/div/div/div/div/div[2]/div/form/div[1]/div[1]/button",
+          "value": "",
+          "id": "e3942d37-a3cf-4dab-bcee-876d106813a2"
+        },
+        {
+          "command": "type",
+          "target": "//*[@id=\"glass-container\"]/div/div/div/div/div[2]/div/form/div[1]/div[1]/input",
+          "value": "jyPbom-6xykra-kymxiw",
+          "id": "2a9f9e1c-547d-4334-b1e9-232d4ee0ac57"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"glass-container\"]/div/div/div/div/div[2]/div/form/div[1]/div[1]/div/button",
+          "value": "",
+          "id": "67f2bfa7-9b2d-4997-856b-14bff5219cb6"
+        }
+      ]
+    },
+    {
+      "id": "85089067-5f86-4726-ab70-81add7525618",
+      "name": "settings",
+      "commands": [
+        {
+          "command": "open",
+          "target": "/",
+          "value": "",
+          "id": "c50946ea-7aad-48f3-a516-56227b5d79ee"
+        },
+        {
+          "command": "setWindowSize",
+          "target": "1024x768",
+          "value": "",
+          "id": "81fce6e2-784e-4658-9cf3-934582be0680"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[1]/header/div[2]/div[8]/span/span/button",
+          "value": "",
+          "id": "28f96869-bc14-4951-b4f5-282be6dcefd0"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[1]/header/div[2]/div[8]/span/div/div/div/ul[1]/li[3]/a",
+          "value": "",
+          "id": "808b9763-6d13-4c04-b3e8-eaac991084d7"
+        }
+      ]
+    },
+    {
+      "id": "9d40efb9-761f-4b1a-9447-7b6480394af7",
+      "name": "search & filter",
+      "commands": [
+        {
+          "command": "open",
+          "target": "/",
+          "value": "",
+          "id": "1b8b53b3-1942-44ae-992a-d9b2d97854e1"
+        },
+        {
+          "command": "setWindowSize",
+          "target": "1024x768",
+          "value": "",
+          "id": "951d2212-ee8a-40e9-af82-5a80adadbcac"
+        },
+        {
+          "command": "type",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[1]/header/div[1]/div[2]/span/span/form/div/input",
+          "value": "blm",
+          "id": "c053eea9-1bd8-48df-aedb-e18e67b877ff"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[1]/header/div[1]/div[2]/span/div/div/div/div[1]/a[2]",
+          "value": "",
+          "id": "043de032-3fc6-45b7-becb-e800d8ea6d1b"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[2]/div[1]/div[2]/div/div[1]/div[2]/span/span/button",
+          "value": "",
+          "id": "7546eb5a-29a0-4ab5-be4a-2290d8e02e46"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[2]/div[1]/div[2]/div/div[1]/div[2]/span/div/div/a[5]",
+          "value": "",
+          "id": "2f51aa18-6597-48d6-a1b9-083392893415"
+        }
+      ]
+    },
+    {
+      "id": "4d053eab-8a1e-4c17-83ae-5c4c557edb9a",
+      "name": "liked",
+      "commands": [
+        {
+          "command": "open",
+          "target": "/",
+          "value": "",
+          "id": "cb145d56-c96b-4822-8b96-0bc623bd5688"
+        },
+        {
+          "command": "setWindowSize",
+          "target": "1024x768",
+          "value": "",
+          "id": "fe7aacb0-762c-44be-855c-eb36337e6680"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[1]/header/div[2]/div[8]/span/span/button",
+          "value": "",
+          "id": "95e6caf5-e38b-47d1-a094-d14d9a98df23"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[1]/header/div[2]/div[8]/span/div/div/div/ul[1]/li[1]/a",
+          "value": "",
+          "id": "501a502a-4ee8-4626-a101-796d7aa4d6fc"
+        }
+      ]
+    },
+    {
+      "id": "dd0e114b-8894-4b9a-89b8-c10e93d6b6bd",
+      "name": "dashboard",
+      "commands": [
+        {
+          "id": "147e4f8a-e779-49a0-972f-3b50f1489e38",
+          "command": "open",
+          "target": "/explore/today",
+          "value": ""
+        },
+        {
+          "command": "setWindowSize",
+          "target": "1024x768",
+          "value": "",
+          "id": "f2185ea6-ae6c-4518-9211-922be44f6937"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[1]/header/div[2]/div[2]/a",
+          "value": "",
+          "id": "972283af-ed84-469d-b6bc-145b82e0599f"
+        },
+        {
+          "command": "verifyElementPresent",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[2]/div[1]/main/div[5]/div[2]/div[1]",
+          "value": "",
+          "id": "f4309e43-8b56-49ec-9c02-96170a9e6941"
+        }
+      ]
+    },
+    {
+      "id": "80643584-1e10-4a46-8427-ef30120e3dde",
+      "name": "trending",
+      "commands": [
+        {
+          "id": "c30b1996-d7c5-4b06-b09f-8555f36dc5ca",
+          "command": "open",
+          "target": "/",
+          "value": ""
+        },
+        {
+          "command": "setWindowSize",
+          "target": "1024x768",
+          "value": "",
+          "id": "aaca6bb5-c915-48e2-934c-ed1b1b22b62a"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[1]/header/div[2]/div[3]/a",
+          "value": "",
+          "id": "2204d64e-0301-4f0c-8a12-4222791c1535"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div/div/div[3]/a",
+          "value": "",
+          "id": "2181f4ed-5edb-4319-a3fb-13f0d8016d93"
+        }
+      ]
+    },
+    {
+      "id": "cfd2aa10-73a6-4fa6-b204-0bd21f1ceaef",
+      "name": "tags",
+      "commands": [
+        {
+          "id": "0b64b42c-722b-428b-842b-29e147e3bbba",
+          "command": "open",
+          "target": "/",
+          "value": ""
+        },
+        {
+          "command": "setWindowSize",
+          "target": "1024x768",
+          "value": "",
+          "id": "35e34454-b56c-4154-8962-86e163ab86ff"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[2]/div[1]/main/div[4]/div/div/div/div/div[3]/a",
+          "value": "",
+          "id": "c656775e-3a55-4af5-b208-64a5da6fd211"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[2]/div[1]/main/div[3]/div[2]/div[2]/div/div/div/div[2]/div/a",
+          "value": "",
+          "id": "935d7e51-107f-4374-af4d-c7a5ec4af26a"
+        }
+      ]
+    },
+    {
+      "id": "e21ffe2d-1938-4d15-9922-21810c93caae",
+      "name": "non-relevant",
+      "commands": [
+        {
+          "id": "6cb66600-0e5c-4f2c-8cf9-7e6996b36bab",
+          "command": "open",
+          "target": "/",
+          "value": ""
+        },
+        {
+          "command": "setWindowSize",
+          "target": "1024x768",
+          "value": "",
+          "id": "4d4fc93d-d5e8-4ddc-9751-87947ba5f13e"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[2]/div[1]/main/div[5]/div[2]/div[1]/div/div/article/header/div/div[2]/span/span/span/button",
+          "value": "",
+          "id": "e3005a8f-f7b0-483c-bee7-5ecc5aecfa30"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"glass-container\"]/div/div/div/button[2]",
+          "value": "",
+          "id": "4e0e29f5-b767-45a3-a024-0160155f32a2"
+        }
+      ]
+    },
+    {
+      "id": "0b97e344-f679-4cf5-973d-ce135809c2f0",
+      "name": "reblog",
+      "commands": [
+        {
+          "id": "0b0d76d8-aee3-4e83-b9ea-e0beffae5dd8",
+          "command": "open",
+          "target": "/",
+          "value": ""
+        },
+        {
+          "command": "setWindowSize",
+          "target": "1024x768",
+          "value": "",
+          "id": "14aae628-f33b-4530-aa2e-26977e447590"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[2]/div[1]/main/div[5]/div[2]/div[1]/div/div/article/div[4]/footer/div[1]/div[2]/div[3]/span/span/span/span/a",
+          "value": "",
+          "id": "1fc264ba-8202-479a-9c3a-7f7a79fc235a"
+        },
+        {
+          "command": "type",
+          "target": "//p[@class='block-editor-rich-text__editable block-editor-block-list__block wp-block is-selected wp-block-paragraph rich-text']",
+          "value": "nah.. bullshit",
+          "id": "8a5ba4b1-3df4-4404-9e9c-7f9521919c85"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"glass-container\"]/div/div/div/div/div/div[2]/div[2]/div/div[3]/div/div/div/button",
+          "value": "",
+          "id": "4f1ecbc8-a842-4017-b91f-9a88cd5a424b"
+        }
+      ]
+    },
+    {
+      "id": "a818c64c-f52b-40df-bc59-3a280070433b",
+      "name": "like",
+      "commands": [
+        {
+          "id": "d4fe506a-cb30-4dde-b0ee-2872a0e63853",
+          "command": "open",
+          "target": "/",
+          "value": ""
+        },
+        {
+          "command": "setWindowSize",
+          "target": "1024x768",
+          "value": "",
+          "id": "b62b7f1d-54cc-46ed-a94f-3d4ccf19d5a5"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[2]/div[1]/main/div[5]/div[2]/div[1]/div/div/article/div[4]/footer/div[1]/div[2]/div[4]/span/span/span/span/button",
+          "value": "",
+          "id": "9d09360d-7639-4dc1-8944-dc15927a399b"
+        },
+        {
+          "command": "verifyElementPresent",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[2]/div[1]/main/div[5]/div[2]/div[1]/div/div/article/div[4]/footer/div[1]/div[2]/div[4]/span/div/div",
+          "value": "",
+          "id": "e7c10271-4435-4ff9-8c36-76132a7119ac"
+        }
+      ]
+    },
+    {
+      "id": "4789db27-7834-4c3c-997a-40b3805b3bc5",
+      "name": "profile",
+      "commands": [
+        {
+          "id": "1427d61f-83c2-4ac5-b03c-c686e4decdb9",
+          "command": "open",
+          "target": "/",
+          "value": ""
+        },
+        {
+          "command": "setWindowSize",
+          "target": "1024x768",
+          "value": "",
+          "id": "9dd673f1-c298-4de8-87be-be60c97130bf"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[2]/div[1]/main/div[5]/div[2]/div[1]/div/div/article/header/div/div[1]/div[1]/div/div/span/span/a",
+          "value": "",
+          "id": "d72f7c47-609b-4c9d-adb7-494c00f1869a"
+        }
+      ]
+    },
+    {
+      "id": "2915bfbe-d407-45bc-9081-de8cfc0a3ebe",
+      "name": "block user",
+      "commands": [
+        {
+          "id": "5f861290-0775-4de4-b67c-130b960c1a9b",
+          "command": "open",
+          "target": "/",
+          "value": "",
+          "isBreakpoint": false
+        },
+        {
+          "command": "setWindowSize",
+          "target": "1024x1024",
+          "value": "",
+          "id": "fd4070fb-b45c-4ad2-9ac8-2e4f008cfcc7"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[2]/div[1]/main/div[5]/div[2]/div[1]/div/div/article/header/div/div[2]/span/span/span/button",
+          "value": "",
+          "id": "c610e698-c0c5-4325-bce0-e7a39b47cbce"
+        },
+        {
+          "command": "click",
+          "target": "//button[text()='Block']",
+          "value": "",
+          "id": "fe638b1f-4c1c-447e-98d4-eaebdebe652e",
+          "isBreakpoint": false
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"glass-container\"]/div[2]/div[2]/div/div[2]/button[2]",
+          "value": "",
+          "id": "edd2ffe8-da22-4c49-bc7c-cf7bff0d2e1b",
+          "isBreakpoint": false
+        },
+        {
+          "command": "verifyElementPresent",
+          "target": "//*[@id=\"glass-container\"]/div[2]/div[2]/div/div[2]/button",
+          "value": "",
+          "id": "0d88601c-7b44-4665-aec8-4fd3ea7a4034",
+          "isBreakpoint": false
+        },
+        {
+          "command": "pause",
+          "target": "1000",
+          "value": "",
+          "id": "c282f898-403c-4056-8364-dafe9ffb5439"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"glass-container\"]/div[2]/div[2]/div/div[2]/button",
+          "value": "",
+          "id": "83deb159-063e-4ab7-bde8-18b81851eb5a",
+          "isBreakpoint": false
+        }
+      ]
+    },
+    {
+      "id": "65085a4b-5393-4a63-86ef-3e71e281692f",
+      "name": "follow user",
+      "commands": [
+        {
+          "id": "22ce5150-4222-43f4-9312-4c6d85ea1372",
+          "command": "open",
+          "target": "/",
+          "value": ""
+        },
+        {
+          "command": "setWindowSize",
+          "target": "1024x768",
+          "value": "",
+          "id": "78f2cde2-d59d-4a3d-9a04-a77d95e2ecdf"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[2]/div[1]/main/div[5]/div[2]/div[1]/div/div/article/header/div/div[1]/div[1]/button",
+          "value": "",
+          "id": "f4b33b11-f9f0-4724-8548-8e2b847185ce"
+        },
+        {
+          "command": "verifyElementNotPresent",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[2]/div[1]/main/div[5]/div[2]/div[1]/div/div/article/header/div/div[1]/div[1]/button",
+          "value": "",
+          "id": "3d71c7ff-ee7b-44cc-a33f-5db88058b0de"
+        }
+      ]
+    },
+    {
+      "id": "18a33d59-7c72-4cc8-bfd3-d57944c46399",
+      "name": "publish post",
+      "commands": [
+        {
+          "id": "a972eacc-62ef-42aa-9d5b-5f8e296a728f",
+          "command": "open",
+          "target": "/",
+          "value": ""
+        },
+        {
+          "command": "setWindowSize",
+          "target": "1024x768",
+          "value": "",
+          "id": "2a757099-0402-4d5b-8cbd-022e33394a63"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[1]/header/div[2]/a",
+          "value": "",
+          "id": "875e123c-1b90-4442-bdbc-e716bd0c498f"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"glass-container\"]/div/div/div/div[1]/div/a",
+          "value": "",
+          "id": "6e55a55f-8774-4afe-8a56-7528f795d687"
+        },
+        {
+          "command": "type",
+          "target": "//h1[@aria-label=\"Block: Heading\"]",
+          "value": "We love ITMO ❤",
+          "id": "7a74a51c-a36e-4924-bf9a-f16d2aacd31a"
+        },
+        {
+          "command": "type",
+          "target": "//p[@aria-label=\"Empty block; start writing or type forward slash to choose a block\"]",
+          "value": "and Klimekov also",
+          "id": "8768623d-b8a7-4489-b8e0-c823dfa95c7b"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"glass-container\"]/div/div/div/div/div/div[2]/div[2]/div/div[3]/div/div/div/button",
+          "value": "",
+          "id": "2dfe9b6b-58bd-43a2-847b-cb11f3b3fd17"
+        },
+        {
+          "command": "verifyElementPresent",
+          "target": "//*[@id=\"after-post-actions\"]",
+          "value": "",
+          "id": "0de1e601-aa13-421b-a3fd-9cebee11e03b"
+        }
+      ]
+    },
+    {
+      "id": "98887102-a895-42ed-acca-71f27c345459",
+      "name": "follow tag",
+      "commands": [
+        {
+          "id": "c283d362-8465-46c8-877c-937e45aa6b5a",
+          "command": "open",
+          "target": "/tagged/blm",
+          "value": ""
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[2]/div[2]/aside/div[2]/div/div[2]/div/button",
+          "value": "",
+          "id": "1fbf210e-be16-4a60-a88b-3c6bc6fb1d3a"
+        }
+      ]
+    },
+    {
+      "id": "ae793521-ba35-4376-9d43-ce5c5206be82",
+      "name": "delete post",
+      "commands": [
+        {
+          "id": "e05bdde9-5470-4f29-929f-a429c5dd504d",
+          "command": "open",
+          "target": "/",
+          "value": ""
+        },
+        {
+          "command": "setWindowSize",
+          "target": "1024x768",
+          "value": "",
+          "id": "0d530d48-728c-44d7-9fa9-e193fcb0bdb4"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[1]/header/div[2]/div[8]/span/span/button",
+          "value": "",
+          "id": "d61443df-f7e5-4a5f-a2d3-d090f80f1e71"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[1]/header/div[2]/div[8]/span/div/div/div/ul[2]/li/div/ul/li[1]/a",
+          "value": "",
+          "id": "cd5e16d1-0365-4188-9bae-aa6f433a5c70"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"base-container\"]/div[2]/div[2]/div[1]/main/div[2]/div[2]/div[1]/div/div/article/div[3]/footer/div[1]/div[2]/div[1]/span/span/button",
+          "value": "",
+          "id": "4a086431-0d11-4b8f-a71a-5e6e816c62b1"
+        },
+        {
+          "command": "click",
+          "target": "//*[@id=\"glass-container\"]/div/div[2]/div/div[2]/button[2]",
+          "value": "",
+          "id": "1b897ea3-bad2-4159-8359-5b2ffd2fc2a4"
+        }
+      ]
+    }
+  ],
+  "snapshot": {
+    "dependencies": {},
+    "tests": [],
+    "jest": {
+      "extraGlobals": []
+    }
+  }
+}
